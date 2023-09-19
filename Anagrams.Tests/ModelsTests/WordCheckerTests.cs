@@ -49,5 +49,32 @@ namespace Anagrams.Tests
             bool comparison = WordChecker.CompareTargetWord(userCharArray, suspectedWord);
             Assert.AreEqual(comparison, false);
         }
+        
+        [TestMethod]
+        public void CompareTargetWord_CompareTargetWordWithArrayElements_Bool()
+        {
+            char[] userCharArray = {'a', 'b', 'd', 'e', 'r'};
+            char[] suspectedWord = {'a', 'b', 'd', 'e', 'r'};
+            bool comparison = WordChecker.CompareTargetWord(userCharArray, suspectedWord);
+            Assert.AreEqual(comparison, true);
+        }
+
+        [TestMethod]
+        public void CheckForAnagram_CompareInitialWordWithUserArrayOfWords_Array()
+        {
+            string startingWord = "beard";
+            string[] userListOfWords = "egg, bread, cheese";
+
+            // Take user's starting word.. Ex: startingWord = "beard";
+
+            // Take user's list of words to check for anagram. Ex: userList = "egg, bread, cheese"
+            // Split this list into an array of strings. Ex: {"egg", "bread", "cheese"};
+            string[] userList = SplitUserInputIntoWords(userListOfWords);
+            // Split each word into characters.   -ib question-
+            // Alphabetize characters or sort into alphabetical order.
+            // Compare user's starting word -- also separated into characters, and alphabetized -- with EACH of the user's list words.
+            // Return all words that are 'true' for anagram checker 
+        }
+        
     }
 }
