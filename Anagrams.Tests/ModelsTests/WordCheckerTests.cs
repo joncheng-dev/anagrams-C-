@@ -10,17 +10,9 @@ namespace Anagrams.Tests
         public void SplitUserInputIntoWords_SplitUserInputIntoWords_Array()
         {
             string UserInput = "egg, cheese, bread";
-            string[] UserInputArray = ["egg", "cheese", "bread"];
-            
-            Triangle newTriangle = new Triangle(length);
-            
-            string result =newTriangle.CheckType();
-            // result = "equilateral triangle";
-
-            WordChecker newUserInputtedString = new WordChecker();
-            string result2 = newUserInputtedString.SplitUserInputIntoWords(UserInput);
-
-            
+            string[] UserInputArray = {"egg", "cheese", "bread"};
+            string[] resultOfMethodCall = WordChecker.SplitUserInputIntoWords();
+            Assert.AreEqual(resultOfMethodCall.GetType(), UserInputArray.GetType());
         }
     }
 }
