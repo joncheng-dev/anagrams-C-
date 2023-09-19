@@ -23,5 +23,21 @@ namespace Anagrams.Models
       Array.Sort<char>(charArray);
       return charArray;
     }
+
+    public static bool CompareTargetWord (char[] arrOne, char[] arrTwo)
+    {
+      if(arrOne.Length != arrTwo.Length)
+      {
+        return false;
+      }
+      for (int i = 0; i < arrOne.Length; i++)
+      {
+        if(arrOne[i] != arrTwo[i])
+        {
+            return false;
+        }
+      }
+      return true;
+    }
   }
 }

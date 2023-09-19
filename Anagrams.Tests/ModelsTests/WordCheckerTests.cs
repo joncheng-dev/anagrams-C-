@@ -40,5 +40,14 @@ namespace Anagrams.Tests
             char[] result = WordChecker.CharArrayAlphabetizer(unalphabetizedCharArray);
             CollectionAssert.AreEqual(alphabetizedCharArray, result);   
         }
+
+        [TestMethod]
+        public void CompareTargetWord_CompareTargetWordWithArrayElements_Bool()
+        {
+            char[] userCharArray = {'a', 'b', 'd', 'e', 'r'};
+            char[] suspectedWord = {'c', 'e', 'e', 'e', 'h', 's'};
+            bool comparison = WordChecker.CompareTargetWord(userCharArray, suspectedWord);
+            Assert.AreEqual(comparison, false);
+        }
     }
 }
