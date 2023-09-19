@@ -1,3 +1,5 @@
+using System;
+
 namespace Anagrams.Models
 {
   public class WordChecker
@@ -16,5 +18,10 @@ namespace Anagrams.Models
       return expectedChars;
     }
     
+    public static char[] CharArrayAlphabetizer (char[] charArray)
+    {
+      Array.Sort<char>(charArray);
+      return charArray;
+    }
   }
 }

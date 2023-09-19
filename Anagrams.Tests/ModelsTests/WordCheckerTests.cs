@@ -31,5 +31,14 @@ namespace Anagrams.Tests
             char[] expectedChars = {'b', 'e', 'a', 'r', 'd'};
             CollectionAssert.AreEqual(stringToChar, expectedChars);
         }
+
+        [TestMethod]
+        public void CharArrayAlphabetizer_PutsCharArrayElementsInAlphaOrder_Array()
+        {
+            char[] unalphabetizedCharArray = {'b', 'e', 'a', 'r', 'd'};
+            char[] alphabetizedCharArray = {'a', 'b', 'd', 'e', 'r'};
+            char[] result = WordChecker.CharArrayAlphabetizer(unalphabetizedCharArray);
+            CollectionAssert.AreEqual(alphabetizedCharArray, result);   
+        }
     }
 }
