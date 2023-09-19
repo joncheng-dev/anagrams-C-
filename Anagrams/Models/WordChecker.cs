@@ -10,6 +10,11 @@ namespace Anagrams.Models
       return returnedFromMethod; 
     }
 
+    public static char[] SplitsWordsIntoArrayOfChars(string userInput)
+    {
+      char[] expectedChars = userInput.ToCharArray();
+      return expectedChars;
+    }
     
   }
 }

@@ -22,5 +22,14 @@ namespace Anagrams.Tests
             string[] expectedResult = {"egg","cheese","bread"};
             CollectionAssert.AreEqual(returnedFromMethod, expectedResult);
         }
+
+        [TestMethod]
+        public void SplitsWordsIntoArrayOfChars_SplitsWordsIntoArrayOfChars_Array()
+        {
+            string userInputSingleWord = "beard";
+            char[] stringToChar = WordChecker.SplitsWordsIntoArrayOfChars(userInputSingleWord);
+            char[] expectedChars = {'b', 'e', 'a', 'r', 'd'};
+            CollectionAssert.AreEqual(stringToChar, expectedChars);
+        }
     }
 }
